@@ -27,7 +27,7 @@ Open browser network tool, usually inside the browser's dev tools, you should fi
 
 4. In `payload.js` modify the data you need
 
-Run the script.
+Run the script: `npm run generate` or `yarn generate`.
 
 A bunch of 200 codes should appear in node console, also an empty array in each request indicates no errors.
 <img width="1087" alt="image" src="https://user-images.githubusercontent.com/19485114/159465656-267513f4-5a71-4750-bf45-1fbe2f4e6ff6.png">
