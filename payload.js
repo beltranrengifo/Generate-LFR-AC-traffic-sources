@@ -1,16 +1,16 @@
-const getPayload = ({ referrer, date }) => {
+const getPayload = ({ referrer, date, page, index }) => {
   return {
     channelId: '526694783752760762',
     context: {
-      canonicalUrl: 'http://liferay.local:8080/',
+      canonicalUrl: page.url,
       contentLanguageId: 'en-US',
       description: '',
       keywords: '',
       languageId: 'en-GB',
       referrer,
       timezoneOffset: '+01:00',
-      title: 'Home - Liferay',
-      url: 'http://liferay.local:8080/',
+      title: page.title,
+      url: page.url,
       userAgent:
         'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
       devicePixelRatio: '1',
@@ -51,8 +51,8 @@ const getPayload = ({ referrer, date }) => {
         properties: { pageLoadTime: 8488 },
       },
     ],
-    id: date.toString(),
-    userId: date.toString(),
+    id: `${date.toString()}-${index}`,
+    userId: `${date.toString()}-${index}`,
   }
 }
 

@@ -9,6 +9,10 @@ exports.referrers = {
     'https://another-fake-domain.com',
     'https://super-fake-and-random-domain.com',
   ],
-  paid: ['https://googleadservices.com'],
+  paid: [
+    'https://googleadservices.com',
+    'https://googleadservices.com',
+    'https://googleadservices.com',
+  ],
   organic: ['https://google.com', 'https://bing.com', 'https://baidu.com'],
 }

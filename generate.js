@@ -1,11 +1,19 @@
-const generate = async ({ referrer, date = new Date() }) => {
+const http = require('axios')
+const { acConfig } = require('./ac-config')
+const { getPayload } = require('./payload')
+
+const generate = async ({ referrer, date = new Date(), index }) => {
+  const { endpoint, page, projectId } = acConfig
+
+  const uniqueDate = date.setSeconds(date.getSeconds() - index)
+
   try {
     return await http.post(
-      'https://osbasahpublisher-ac-asahuat.lfr.cloud/',
-      getPayload({ referrer, date }),
+      endpoint,
+      getPayload({ referrer, date: uniqueDate, page, index }),
       {
         headers: {
-          'osb-asah-project-id': 'asah0878884185e94d299b56779700af5d43',
+          'osb-asah-project-id': projectId,
           Referer: referrer,
         },
       }
@@ -16,12 +24,3 @@ const generate = async ({ referrer, date = new Date() }) => {
 }
 
 exports.generate = generate
-
-/* request().then((res) => {
-  const {
-    status,
-    config: { headers },
-    data,
-  } = res
-  console.log({ status, headers, data })
-}) */
