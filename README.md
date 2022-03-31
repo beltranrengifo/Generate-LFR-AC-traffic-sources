@@ -34,5 +34,10 @@ We use this script in Tango product team just for developing purposes of our [Co
 
 Run the script: `npm run generate` or `yarn generate`.
 
+By default, the script generates 50 visits per each domain in `referrers.js`. This setting can be override from the command line just passing the value, ie. for generate 400 visits per domain:
+
+`npm run generate 400` or `yarn generate 400`
+
 A bunch of 200 codes should appear in node console, also an empty array in each request indicates no errors.
+
 <img width="1087" alt="image" src="https://user-images.githubusercontent.com/19485114/159465656-267513f4-5a71-4750-bf45-1fbe2f4e6ff6.png">
