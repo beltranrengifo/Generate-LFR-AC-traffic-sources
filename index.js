@@ -1,7 +1,8 @@
 const { referrers } = require('./referrers')
 const { generate } = require('./generate')
 
-const VISITS_PER_DOMAIN = 50
+const CliArgs = process.argv.slice(2)
+const VISITS_PER_DOMAIN = parseInt(CliArgs[0]) || 50
 
 for (const domains of Object.values(referrers)) {
   domains.forEach((referrer) => {
