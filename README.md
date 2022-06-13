@@ -20,6 +20,7 @@ We use this script in Tango product team just for developing purposes of our [Co
 6. Open `ac-config.js` file and change the needed values:
 
 ```json
+// ac-config.js
 {
   "endpoint": "https://osbasahpublisher-ac-asahuat.lfr.cloud/",
   "projectId": "asah0878884185e94d299b56779700af5d43",
